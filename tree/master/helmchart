@@ -9,7 +9,7 @@ spec:
     server: "https://kubernetes.default.svc"
   project: default 
   source: 
-    path: .\helmchart
+    path: .
     repoURL: "https://github.com/mopurideepa/argocd-example-apps.git"
     targetRevision: main
     #directory:
