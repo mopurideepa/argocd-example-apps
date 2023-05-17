@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: helmapp
+  namespace: argocd
+spec:
+  destination:
+    namespace: 
+    server: "https://kubernetes.default.svc"
+  project: default 
+  source: 
+    path: .
+    repoURL: "https://github.com/mopurideepa/argocd-example-apps.git"
+    targetRevision: main
+    #directory:
+     # recurse: true
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
