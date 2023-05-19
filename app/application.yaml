@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     namespace: deepa3
-    server: "shttps://kubernetes.default.svc"
+    server: "https://kubernetes.default.svc"
   project: default 
   source: 
     path: app
