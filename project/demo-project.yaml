@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: deepa3-demo-project
+  namespace: argocd
+spec:
+  destination:
+    namespace: deepa3-demo-project
+    server: "https://kubernetes.default.svc"
+  project: demo-project
+  source: 
+    path: project
+    repoURL: "https://github.com/mopurideepa/argocd-example-apps.git"
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
