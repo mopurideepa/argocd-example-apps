@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: deepa3-dev-project
+    namespace: ns-1
     server: "https://kubernetes.default.svc"
   project: dev-project
   source: 
