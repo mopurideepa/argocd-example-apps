@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: auto-prune
+  name: auto-prune1
   namespace: argocd
 spec:
   destination:
-    namespace: auto-prune
+    namespace: auto-prune1
     server: "https://kubernetes.default.svc"
   project: default 
   source: 
