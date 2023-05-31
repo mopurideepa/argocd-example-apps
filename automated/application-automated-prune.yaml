@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auto-prune
+  namespace: argocd
+spec:
+  destination:
+    namespace: auto-prune
+    server: "https://kubernetes.default.svc"
+  project: default 
+  source: 
+    path: automated
+    repoURL: "https://github.com/mopurideepa/argocd-example-apps.git"
+    targetRevision: main
+    directory:
+      recurse: true
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
