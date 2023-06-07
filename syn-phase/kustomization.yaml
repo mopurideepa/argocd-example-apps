@@ -1,0 +1,6 @@
+namePrefix: phases-practice-
+resources:
+- pre-sync-job.yaml
+- post-sync-job.yaml
+- sync-job.yaml
+- skip-job.yaml
